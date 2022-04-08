@@ -26,9 +26,9 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    // fallback: true => render an empty page first and render content
-    // fallback: blocking => render contented page
-    // fallback: false => 
+    // fallback: true => render an empty page first and render content.
+    // fallback: blocking => render contented page.
+    // fallback: false => tells nextjs not all contents are included.
     fallback: 'blocking',
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
